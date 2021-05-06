@@ -35,7 +35,7 @@ public class ListaServicioImp implements ListaServicio {
 			if (platom != null) {
 				for (Plato plato : allplatos) {
 
-					if (platom.equals(plato.getNombre_plato())) {
+					if (platom.equals(plato.getNombre())) {
 
 						if(plato.getIngredientes() != null && !plato.getIngredientes().isBlank())
 						

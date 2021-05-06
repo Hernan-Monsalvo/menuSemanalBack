@@ -26,6 +26,12 @@ public class PlatoServicioImp implements PlatoServicio {
 	public Plato listarPorId(int id) {
 		return repositorio.findById(id);
 	}
+	
+	@Override
+	public Plato listarPorNombre(String nombre) {
+		
+		return repositorio.findByNombre(nombre);
+	}
 
 	@Override
 	public Plato agregar(Plato plato) {

@@ -12,6 +12,8 @@ public interface PlatoRepository extends Repository<Plato, Integer> {
 	
 	Plato findById(int id);
 	
+	Plato findByNombre(String nombre);
+	
 	Plato save(Plato plato);
 	
 	void delete(Plato plato);

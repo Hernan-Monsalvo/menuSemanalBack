@@ -12,7 +12,7 @@ public class Plato {
 	private int id;
 	
 	@Column
-	private String nombre_plato;
+	private String nombre;
 	
 	@Column
 	private String ingredientes;
@@ -28,12 +28,12 @@ public class Plato {
 		this.id = id;
 	}
 
-	public String getNombre_plato() {
-		return nombre_plato;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setNombre_plato(String nombre_plato) {
-		this.nombre_plato = nombre_plato;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public String getIngredientes() {

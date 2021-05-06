@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping({"/plato"})
 public class ControladorPlato {
@@ -20,6 +21,16 @@ public class ControladorPlato {
 	
 	@GetMapping(params = {"tipo"})
 	public List<Plato> listarPorTipo(@RequestParam(value="tipo") String tipo){
+		return service.listarPorTipo(tipo);
+	}
+	
+	@GetMapping(params = {"nombre"})
+	public List<Plato> listaDelMismoTipo(@RequestParam(value="nombre") String nombre){
+		
+		Plato plato = service.listarPorNombre(nombre);
+		
+		String tipo = plato.getTipo();
+		
 		return service.listarPorTipo(tipo);
 	}
 	

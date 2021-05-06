@@ -10,6 +10,8 @@ public interface PlatoServicio {
 	
 	Plato listarPorId(int id);
 	
+	Plato listarPorNombre(String nombre_plato);
+	
 	Plato agregar(Plato plato);
 	
 	Plato editar(Plato plato);

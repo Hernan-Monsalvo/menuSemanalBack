@@ -68,20 +68,20 @@ public class MenuServicioImp implements MenuServicio {
 
 				int indexRandom = rdn.nextInt(veg.size());
 				Plato platoRandom = veg.get(indexRandom);
-				menuAleatorio[i] = platoRandom.getNombre_plato();
-				System.out.println(platoRandom.getNombre_plato());
+				menuAleatorio[i] = platoRandom.getNombre();
+				System.out.println(platoRandom.getNombre());
 			}
 			if (cfg.equals("car")) {
 				int indexRandom = rdn.nextInt(car.size());
 				Plato platoRandom = car.get(indexRandom);
-				menuAleatorio[i] = platoRandom.getNombre_plato();
-				System.out.println(platoRandom.getNombre_plato());
+				menuAleatorio[i] = platoRandom.getNombre();
+				System.out.println(platoRandom.getNombre());
 			}
 			if (cfg.equals("del")) {
 				int indexRandom = rdn.nextInt(del.size());
 				Plato platoRandom = del.get(indexRandom);
-				menuAleatorio[i] = platoRandom.getNombre_plato();
-				System.out.println(platoRandom.getNombre_plato());
+				menuAleatorio[i] = platoRandom.getNombre();
+				System.out.println(platoRandom.getNombre());
 
 			}
 			}
