@@ -94,7 +94,9 @@ public class Lista {
 						double cant2 = Double.parseDouble(ing2[1]);
 						double total = cant1 + cant2;
 						// ing2 = null;
-						ing[1] = Double.toString(total);
+						ing[1] = String.format("%.1f", total);
+						ing[1] = ing[1].replace(",", ".");
+
 						ing2[0] = "";
 						ing2[1] = "";
 						ing2[2] = "";

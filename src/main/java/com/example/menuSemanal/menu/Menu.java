@@ -12,6 +12,9 @@ public class Menu {
 	private int id;
 	
 	@Column
+	private String nombre;
+
+	@Column
 	private String mes;
 	
 	@Column
@@ -88,6 +91,15 @@ public class Menu {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public String getMes() {

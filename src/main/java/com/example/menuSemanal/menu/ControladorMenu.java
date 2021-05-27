@@ -3,7 +3,10 @@ package com.example.menuSemanal.menu;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
+import com.itextpdf.layout.Document;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -24,6 +27,13 @@ public class ControladorMenu {
 	//@RequestMapping(method = RequestMethod.GET, params = {"id"}) //para diferenciar los dos metodos get, se agrega que parametro escucha
 	public Menu listarPorId(@RequestParam(value="id") int id){
 		return service.listarPorId(id);
+	}
+	
+	@GetMapping(params = {"pdfid"}, produces = MediaType.APPLICATION_PDF_VALUE)
+	public byte[] pdfPorId(@RequestParam(value="pdfid") int id){
+		
+		return service.pdfPorId(id);
+		
 	}
 	
 	@PostMapping(params = {"aleatorio"})

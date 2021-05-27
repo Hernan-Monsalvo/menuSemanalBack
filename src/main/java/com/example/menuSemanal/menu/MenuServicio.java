@@ -2,6 +2,8 @@ package com.example.menuSemanal.menu;
 
 import java.util.List;
 
+import com.itextpdf.layout.Document;
+
 public interface MenuServicio {
 	
 	List<Menu> listar();
@@ -15,6 +17,8 @@ public interface MenuServicio {
 	Menu eliminar(int id);
 	
 	String[] menuAleatorio(ConfiguracionMenu config);
+
+	byte[] pdfPorId(int id);
 	
 	
 }
